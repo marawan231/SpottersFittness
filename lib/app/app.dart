@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
   var userIdFromDatabase = CacheHelper.getData(key: 'userId');
   var userPicFromDatabase = CacheHelper.getData(key: 'userPic');
   var userGoToHomePage = CacheHelper.getData(key: 'goToHomePage');
+  var userGoToProfileInfoScren =
+      CacheHelper.getData(key: 'profieNotComletedYet');
 
   String getInitialScreen(onBoarding) {
     if (onBoarding != null) {
@@ -21,7 +23,9 @@ class MyApp extends StatelessWidget {
         userPic = userPicFromDatabase;
         return Routes.homePage;
       } else {
-        return Routes.loginRoute;
+        return userGoToProfileInfoScren != null
+            ? Routes.personalInfo
+            : Routes.loginRoute;
       }
     } else {
       return Routes.splashRoute;

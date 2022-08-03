@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:spotters_app_clone/helpers/shared_prefrences.dart';
 import 'package:spotters_app_clone/presentation/resources/color_manger.dart';
 import 'package:spotters_app_clone/presentation/widgets/badge.dart';
 import 'package:spotters_app_clone/presentation/widgets/drawer_item.dart';
@@ -181,6 +182,9 @@ class _HomePageViewState extends State<HomePageView> {
   void initState() {
     BlocProvider.of<ProfileCubit>(context).getProfileData();
     BlocProvider.of<ChatCubit>(context).getAllChatUsers();
+    CacheHelper.removeData(
+      key: 'profieNotComletedYet',
+    );
 
     super.initState();
   }
