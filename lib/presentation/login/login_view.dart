@@ -161,7 +161,7 @@ class _LoginViewState extends State<LoginView> {
               state.userInfo.trProfile == 'y') {
             CacheHelper.saveData(
               key: 'goToHomePage',
-              value: true,
+              value: 'true',
             );
             Navigator.pushReplacementNamed(
               context,
