@@ -159,6 +159,10 @@ class _LoginViewState extends State<LoginView> {
 
           if (state.userInfo.trVerify == 'y' &&
               state.userInfo.trProfile == 'y') {
+            CacheHelper.saveData(
+              key: 'goToHomePage',
+              value: true,
+            );
             Navigator.pushReplacementNamed(
               context,
               Routes.homePage,

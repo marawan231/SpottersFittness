@@ -164,7 +164,7 @@ class _OtbViewState extends State<OtbView> {
                 showScaffold(
                   text: state.result.error![0],
                   context: context,
-                  color: Colors.red,
+                  color: Colors.green,
                 );
               }
               if (state is VerifyOtpError) {

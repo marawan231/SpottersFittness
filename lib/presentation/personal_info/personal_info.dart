@@ -445,10 +445,6 @@ class _PersonalInfoViewState extends State<PersonalInfoView> {
           allCerties = state.listOfCerties;
           print(state.listOfCerties);
         } else if (state is SumbitSuccedded) {
-          CacheHelper.saveData(
-            key: 'goToHomePage',
-            value: state.sumbit.usrID,
-          );
           showScaffold(
             text: 'Profile Created Successfull',
             context: context,
