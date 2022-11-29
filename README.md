@@ -1,5 +1,10 @@
 # spotters_app_clone
 
+This App for managing gym system and the relation between the trainee and the trainers
+
+![Fittness](https://user-images.githubusercontent.com/81522801/204525602-7fc5ba42-b9df-4d64-864a-9484452256bb.jpeg)
+
+
 A new Flutter project.
 
 ## Getting Started
